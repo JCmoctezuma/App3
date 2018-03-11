@@ -1,0 +1,2 @@
+C:\Users\croosan\documents\visual studio 2017\Projects\App3\App3\App3.UWP\App3.UWP.csproj;x86
+C:\Users\croosan\documents\visual studio 2017\Projects\App3\App3\App3\App3.csproj;neutral

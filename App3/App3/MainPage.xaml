@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App3"
+             x:Class="App3.MainPage">
+
+    <ContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color" iOS="Black" Android="White" WinPhone="#FF303030" />
+    </ContentPage.BackgroundColor>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" iOS="White" Android="Green" WinPhone="White" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowSpacing>
+            <OnPlatform x:TypeArguments="x:Double" iOS="8"  />
+        </Grid.RowSpacing>
+
+        <Grid.ColumnSpacing>
+            <OnPlatform x:TypeArguments="x:Double" iOS="8" />
+        </Grid.ColumnSpacing>
+        <Label Text="TXT Prueba" Grid.Row="0" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="2"   x:Name="txtDePrueba" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        <local:CustomButton Text="UP"    Grid.Row="1"   Grid.Column="1"   CommandParameter="1" Pressed="CustomButton_Pressed"   Released="CustomButton_Released"/>
+        <local:CustomButton Text="DOWN"  Grid.Row="3"   Grid.Column="1"   CommandParameter="2" Pressed="CustomButton_Pressed"   Released="CustomButton_Released"/>
+        <local:CustomButton Text="LEFT"  Grid.Row="2"   Grid.Column="0"   CommandParameter="3" Pressed="CustomButton_Pressed"   Released="CustomButton_Released"/>
+        <local:CustomButton Text="RIGHT" Grid.Row="2"   Grid.Column="2"   CommandParameter="4" Pressed="CustomButton_Pressed"   Released="CustomButton_Released"/>
+        <local:CustomButton Text="A"     Grid.Row="3"   Grid.Column="4"   CommandParameter="5" Pressed="CustomButton_Pressed"   Released="CustomButton_Released"/>
+        <local:CustomButton Text="B"     Grid.Row="3"   Grid.Column="5"   CommandParameter="6" Pressed="CustomButton_Pressed"   Released="CustomButton_Released"/>
+
+    </Grid>
+    
+</ContentPage>
